@@ -8,6 +8,7 @@ export default function Header() {
      <ul>
        <li><Link href="/">Home</Link></li>
        <li><Link href="/news">News</Link></li>
+       <li><Link href="/formAdd">Add news</Link></li>
      </ul>
 
     </div>

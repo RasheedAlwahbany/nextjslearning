@@ -1,6 +1,11 @@
 import { Fragment } from "react";
+import { useRouter } from "next/router";
 
 function NewsItem(props) {
+    const router=useRouter();
+    function showDetails(){
+       router.push('/news/'+props.data.Id);
+    }
   return (
     <Fragment>
       <div className="center" >
@@ -8,6 +13,7 @@ function NewsItem(props) {
       <h1>
         <small>{props.data.Id} </small> {props.data.Title}
       </h1>
+      <button onClick={showDetails}>Details</button>
       </div>
     </Fragment>
   );
